@@ -4,11 +4,9 @@ k=28
 m=17
 n=22
 
-#28 17 22
-
 $n_pop=k+m+n
 
-$type_pops={'k'=>28,'m'=>17,'n'=>22}
+$type_pops={'k'=>k,'m'=>m,'n'=>n}
 
 #Possible pairings with probability of offspring having dominant phenotype
 
