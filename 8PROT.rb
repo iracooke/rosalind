@@ -8,3 +8,5 @@ translation=""
 rna_string.upcase.chars.each_slice(3) { |group| translation<<$rna_codon_table[group.join("")] }
 
 puts translation
+
+
