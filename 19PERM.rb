@@ -9,21 +9,21 @@ n=ARGV[0].to_i
 
 puts factorial(n)
 
+def permute(items)
+  if items.count == 2
+    return [items,items.reverse]
+  end
 
 
-def print_permutations(n,position)
-
-	prefix=(1..position-1).collect { |e| e } if position>1
-	prefix=prefix.join(" ")
-
-#	require 'debugger';debugger
-
-	suffix=((position+1)..n).collect { |e| e } if position<n
-	suffix=suffix.join(" ")
-
-	(position..n).each do |i|  
-		puts "#{prefix} #{i} #{suffix}"
-	end
+  perms = []
+  for item in items
+    remaining = items.dup
+    remaining.delete(item)
+    perms << permute(remaining).collect {|p_remain| [item,p_remain].flatten }
+  end
+  return perms.flatten(1)
 end
 
-puts print_permutations(n,2)
+numarr = (1..n).collect { |e| e}
+
+permute(numarr).each { |e| puts e.join(" ") }
