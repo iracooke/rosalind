@@ -1,0 +1,17 @@
+(cat)dog;
+dog cat
+
+(dog,cat);
+dog cat
+
+(C,D,(A,B));
+A D
+
+(A,(D,C),B);
+A C
+
+(((A,B),C),D);
+A D
+
+(,,,,,A,,,B,,);
+A B
