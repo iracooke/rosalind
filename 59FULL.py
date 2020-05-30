@@ -7,7 +7,7 @@ with open("inputs/monoisotopic_mass_table.txt") as f:
 		aa,mass = line.split()
 		mass_table[float(mass)]=aa
 
-infile="inputs/59FULL.txt"
+# infile="inputs/59FULL.txt"
 infile="inputs/rosalind_full.txt"
 
 L = [float(line.rstrip()) for line in open(infile).readlines()]
@@ -48,11 +48,7 @@ while len(unpaired_ions)>0:
 					break;
 			break;
 
-# print(suffixes)
-# print(prefixes)
-
 pairs = [(p,s) for p,s in zip(sorted(prefixes),reversed(sorted(suffixes)))]
-# print(pairs)
 
 bseq=""
 for i in range(1,len(pairs)):
